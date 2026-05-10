@@ -32,7 +32,7 @@
   #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.82); z-index:9999; overflow-y:auto; cursor:zoom-out; }
   #lb-inner { position:relative; max-width:820px; margin:24px auto; cursor:default; }
   #lb-inner img { width:100%; display:block; border-radius:4px; }
-  #lb-close { position:absolute; top:-36px; right:0; background:rgba(255,255,255,0.15); color:#fff; border:none; padding:6px 14px; border-radius:4px; cursor:pointer; font-size:13px; font-family:Arial,sans-serif; }
+  #lb-close { position:fixed; top:16px; right:24px; background:rgba(255,255,255,0.15); color:#fff; border:none; padding:6px 14px; border-radius:4px; cursor:pointer; font-size:13px; font-family:Arial,sans-serif; z-index:10000; }
   #lb-close:hover { background:rgba(255,255,255,0.28); }
 </style>
 </head>
@@ -143,6 +143,7 @@
   </div>
 </div>
 <div id="lb" onclick="this.style.display='none'">
+  <button id="lb-close" onclick="document.getElementById('lb').style.display='none'">&times; Cerrar</button>
   <div id="lb-inner" onclick="event.stopPropagation()">
     <button id="lb-close" onclick="document.getElementById('lb').style.display='none'">&times; Cerrar</button>
     <img id="lb-img" src="" alt="">
