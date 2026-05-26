@@ -13,9 +13,10 @@
   .header-title { flex: 1; text-align: center; color: #375F86; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; line-height: 1.2; }
   .header-date { color: #375F86; font-size: 13px; font-weight: 600; white-space: nowrap; }
   .main-content { width: 100%; margin: 20px 0; padding: 0 16px; box-sizing: border-box; }
-  .topics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .topics-full { margin-top: 16px; }
-  .topic-section { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+  .topics-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+  .topic-section { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.07); width: calc(50% - 8px); }
+  .topic-hv { order: 1; } .topic-hc { order: 2; } .topic-hi { order: 3; }
+  .topic-se { order: 4; } .topic-po { order: 5; } .topic-em { order: 6; }
   .topic-header { color: #fff; font-size: 12px; font-weight: bold; padding: 8px 14px; text-transform: uppercase; letter-spacing: 0.8px; background: linear-gradient(90deg, #DC982F 0%, #375F86 50%, #96B734 100%); }
   .article { padding: 10px 14px 11px 12px; border-bottom: 1px solid #f0f0f0; border-left: 3px solid transparent; }
   .topic-hv .article { border-left-color: #96B734; }
@@ -29,7 +30,7 @@
   .article-title:hover { text-decoration: underline; color: #1a3f6b; }
   .article-meta { color: #626463; font-size: 11px; }
   .article-empty { padding: 10px 14px; color: #aaa; font-style: italic; font-size: 12px; }
-  @media (max-width: 700px) { .topics-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) { .topic-section { width: 100%; } .topic-hc { order: 1; } .topic-hv { order: 2; } .topic-hi { order: 3; } .topic-se { order: 4; } .topic-em { order: 5; } .topic-po { order: 6; } }
   #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.82); z-index:9999; overflow-y:auto; cursor:zoom-out; }
   #lb-inner { position:relative; max-width:820px; margin:24px auto; cursor:default; }
   #lb-inner img { width:100%; display:block; border-radius:4px; }
@@ -47,7 +48,6 @@
 <div class="gradient-bar"></div>
 <div class="main-content">
   <div class="topics-grid">
-    <div>
 <section class="topic-section topic-hv">
   <div class="topic-header">Hidrógeno Verde</div>
   <div class="article">
@@ -61,7 +61,14 @@
     <div style="margin-top:4px;"><a href="https://h2news.cl/2026/05/25/la-energia-del-futuro-no-sera-una-sola/" target="_blank" style="font-size:11px; color:#96B734; text-decoration:none;">Ver noticia &rarr;</a></div>
   </div>
 </section>
-<div style="margin-top:16px">
+<section class="topic-section topic-hc">
+  <div class="topic-header">H2 Chile</div>
+  <div class="article">
+    <a class="article-title" id="01_eventos-paralelos-whs-chile" href="https://H2Chile.github.io/h2chile-clipping/2026-05-26/#01_eventos-paralelos-whs-chile" data-img="https://raw.githubusercontent.com/H2Chile/h2chile-clipping/main/docs/2026-05-26/screenshots/h2_chile_2026-05-26/01_eventos-paralelos-whs-chile.png" id="01_eventos-paralelos-whs-chile" target="_blank">Eventos paralelos de Chile y Latinoamérica en el WHS 2026 se concentraron en las alianzas de cooperación en hidrógeno verde</a>
+    <div class="article-meta">H2news · 26 de mayo de 2026</div>
+    <div style="margin-top:4px;"><a href="https://h2news.cl/2026/05/26/eventos-paralelos-de-chile-y-latinoamerica-en-el-whs-2026-se-concentraron-en-las-alianzas-de-cooperacion-en-hidrogeno-verde/" target="_blank" style="font-size:11px; color:#96B734; text-decoration:none;">Ver noticia &rarr;</a></div>
+  </div>
+</section>
 <section class="topic-section topic-hi">
   <div class="topic-header">H2 Internacional</div>
   <div class="article">
@@ -85,8 +92,21 @@
     <div class="article-meta">Hydrogen Insight · 22 de mayo de 2026</div>
   </div>
 </section>
-
-<div style="margin-top:16px">
+<section class="topic-section topic-se">
+  <div class="topic-header">Sector Energía</div>
+  <div class="article">
+    <a class="article-title" id="01_presidente-del-coordinador-electrico" href="https://H2Chile.github.io/h2chile-clipping/2026-05-26/#01_presidente-del-coordinador-electrico" data-img="https://raw.githubusercontent.com/H2Chile/h2chile-clipping/main/docs/2026-05-26/screenshots/sector_energia_2026-05-26/01_presidente-del-coordinador-electrico.png" id="01_presidente-del-coordinador-electrico" target="_blank">Presidente del Coordinador Eléctrico desliza autocrítica y afirma: "Tenemos que recuperar la confianza en el sector eléctrico"</a>
+    <div class="article-meta">El Diario Financiero · 25 de mayo de 2026</div>
+  </div>
+  <div class="article">
+    <a class="article-title" id="02_acenor-designa-a-investigador" href="https://H2Chile.github.io/h2chile-clipping/2026-05-26/#02_acenor-designa-a-investigador" data-img="https://raw.githubusercontent.com/H2Chile/h2chile-clipping/main/docs/2026-05-26/screenshots/sector_energia_2026-05-26/02_acenor-designa-a-investigador.png" id="02_acenor-designa-a-investigador" target="_blank">Acenor designa a investigador de LyD como sucesor de Javier Bustos en la dirección ejecutiva del gremio</a>
+    <div class="article-meta">El Diario Financiero · 25 de mayo de 2026</div>
+  </div>
+  <div class="article">
+    <a class="article-title" id="03_maximo-pacheco-renuncia-a" href="https://H2Chile.github.io/h2chile-clipping/2026-05-26/#03_maximo-pacheco-renuncia-a" data-img="https://raw.githubusercontent.com/H2Chile/h2chile-clipping/main/docs/2026-05-26/screenshots/sector_energia_2026-05-26/03_maximo-pacheco-renuncia-a.png" id="03_maximo-pacheco-renuncia-a" target="_blank">Máximo Pacheco renuncia a directorio de Novandino Litio: "He seguido atentamente la ofensiva que han llevado algunos sectores"</a>
+    <div class="article-meta">La Tercera · 25 de mayo de 2026</div>
+  </div>
+</section>
 <section class="topic-section topic-po">
   <div class="topic-header">Política Nacional e Internacional</div>
   <div class="article">
@@ -106,36 +126,6 @@
     <div class="article-meta">La Tercera · 26 de mayo de 2026</div>
   </div>
 </section>
-</div>
-</div>
-    </div>
-    <div>
-<section class="topic-section topic-hc">
-  <div class="topic-header">H2 Chile</div>
-  <div class="article">
-    <a class="article-title" id="01_eventos-paralelos-whs-chile" href="https://H2Chile.github.io/h2chile-clipping/2026-05-26/#01_eventos-paralelos-whs-chile" data-img="https://raw.githubusercontent.com/H2Chile/h2chile-clipping/main/docs/2026-05-26/screenshots/h2_chile_2026-05-26/01_eventos-paralelos-whs-chile.png" id="01_eventos-paralelos-whs-chile" target="_blank">Eventos paralelos de Chile y Latinoamérica en el WHS 2026 se concentraron en las alianzas de cooperación en hidrógeno verde</a>
-    <div class="article-meta">H2news · 26 de mayo de 2026</div>
-    <div style="margin-top:4px;"><a href="https://h2news.cl/2026/05/26/eventos-paralelos-de-chile-y-latinoamerica-en-el-whs-2026-se-concentraron-en-las-alianzas-de-cooperacion-en-hidrogeno-verde/" target="_blank" style="font-size:11px; color:#96B734; text-decoration:none;">Ver noticia &rarr;</a></div>
-  </div>
-</section>
-<div style="margin-top:16px">
-<section class="topic-section topic-se">
-  <div class="topic-header">Sector Energía</div>
-  <div class="article">
-    <a class="article-title" id="01_presidente-del-coordinador-electrico" href="https://H2Chile.github.io/h2chile-clipping/2026-05-26/#01_presidente-del-coordinador-electrico" data-img="https://raw.githubusercontent.com/H2Chile/h2chile-clipping/main/docs/2026-05-26/screenshots/sector_energia_2026-05-26/01_presidente-del-coordinador-electrico.png" id="01_presidente-del-coordinador-electrico" target="_blank">Presidente del Coordinador Eléctrico desliza autocrítica y afirma: "Tenemos que recuperar la confianza en el sector eléctrico"</a>
-    <div class="article-meta">El Diario Financiero · 25 de mayo de 2026</div>
-  </div>
-  <div class="article">
-    <a class="article-title" id="02_acenor-designa-a-investigador" href="https://H2Chile.github.io/h2chile-clipping/2026-05-26/#02_acenor-designa-a-investigador" data-img="https://raw.githubusercontent.com/H2Chile/h2chile-clipping/main/docs/2026-05-26/screenshots/sector_energia_2026-05-26/02_acenor-designa-a-investigador.png" id="02_acenor-designa-a-investigador" target="_blank">Acenor designa a investigador de LyD como sucesor de Javier Bustos en la dirección ejecutiva del gremio</a>
-    <div class="article-meta">El Diario Financiero · 25 de mayo de 2026</div>
-  </div>
-  <div class="article">
-    <a class="article-title" id="03_maximo-pacheco-renuncia-a" href="https://H2Chile.github.io/h2chile-clipping/2026-05-26/#03_maximo-pacheco-renuncia-a" data-img="https://raw.githubusercontent.com/H2Chile/h2chile-clipping/main/docs/2026-05-26/screenshots/sector_energia_2026-05-26/03_maximo-pacheco-renuncia-a.png" id="03_maximo-pacheco-renuncia-a" target="_blank">Máximo Pacheco renuncia a directorio de Novandino Litio: "He seguido atentamente la ofensiva que han llevado algunos sectores"</a>
-    <div class="article-meta">La Tercera · 25 de mayo de 2026</div>
-  </div>
-</section>
-</div>
-<div style="margin-top:16px">
 <section class="topic-section topic-em">
   <div class="topic-header">Empresas</div>
   <div class="article">
@@ -160,9 +150,6 @@
   </div>
 </section>
 </div>
-
-    </div>
-  </div>
 </div>
 <div id="lb" onclick="this.style.display='none'">
   <button id="lb-close" onclick="document.getElementById('lb').style.display='none'">&times; Cerrar</button>
